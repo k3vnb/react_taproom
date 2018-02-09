@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return(
   <div className='footerFlex'>
-    <style jsx>{`
+    <style jsx global>{`
         .footerFlex {
           display: flex;
           justify-content: space-between;
@@ -12,8 +13,11 @@ function Footer() {
           border-top: 1px solid black;
           background-color: #6495ed6e;
         }
+        a {
+          text-decoration: none;
+        }
     `}</style>
-    <h4>React.Taps</h4>
+  <h4><Link to='/'>React.Taps</Link></h4>
     <p>Cool Stuff</p>
   </div>
   );

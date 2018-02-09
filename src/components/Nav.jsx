@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Edit from './Edit';
 
 const navFlex = {
   display: 'flex',
@@ -6,15 +8,21 @@ const navFlex = {
   alignItems: 'center',
   borderBottom: '1px solid black',
   padding: '1% 4%',
-  backgroundColor: '#6495ed6e'
+  backgroundColor: '#6495ed6e',
+  textDecoration: 'none'
 };
+
 
 function Nav() {
   return (
     <div style={navFlex}>
-      <h1>React.Taps</h1>
-      <a>Edit Beers</a>
-      <a>Add New Beers</a>
+      <style jsx global>{`
+          a {
+            text-decoration: none;
+          }`}</style>
+      <h1><Link to='/'>React.Taps</Link></h1>
+      <Link to='/edit'>Edit Beers</Link>
+      <Link to='/addnew'>Add New Beers</Link>
     </div>
   );
 }
