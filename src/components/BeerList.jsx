@@ -1,5 +1,5 @@
 import React from 'react';
-import Beer from './beer';
+import Beer from './Beer';
 
 let beerListArray = [
   {
@@ -23,13 +23,27 @@ let beerListArray = [
     abv: '8.4%',
     amount: 29
   }
-]
+];
 
 
 function BeerList() {
   return(
     <div>
-      Beerlist Works
+      <h2>Our Current Beers</h2>
+      <div>
+        {beerListArray.map((beer, index) =>
+          <div>
+            <Beer
+              title={beer.title}
+              brand={beer.brand}
+              price={beer.price}
+              abv={beer.abv}
+              amount={beer.amount}
+              key={index}
+            />
+          </div>
+        )}
+      </div>
     </div>
   );
 }

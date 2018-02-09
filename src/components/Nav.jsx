@@ -4,7 +4,7 @@ const navFlex = {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center'
-}
+};
 
 function Nav() {
   return (
@@ -22,4 +22,4 @@ function Nav() {
   );
 }
 
-export default Nav
+export default Nav;
