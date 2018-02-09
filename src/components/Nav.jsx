@@ -3,21 +3,18 @@ import React from 'react';
 const navFlex = {
   display: 'flex',
   justifyContent: 'space-between',
-  alignItems: 'center'
+  alignItems: 'center',
+  borderBottom: '1px solid black',
+  padding: '1% 4%',
+  backgroundColor: '#6495ed6e'
 };
 
 function Nav() {
   return (
     <div style={navFlex}>
-      <div>
-        <h1>React.Taps</h1>
-      </div>
-      <div>
-        <ul style={navFlex}>
-          <li><a>Edit Beers</a></li>
-          <li><a>Add New Beers</a></li>
-        </ul>
-      </div>
+      <h1>React.Taps</h1>
+      <a>Edit Beers</a>
+      <a>Add New Beers</a>
     </div>
   );
 }

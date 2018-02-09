@@ -1,5 +1,6 @@
 import React from 'react';
-import Nav from './nav';
+import Nav from './Nav';
+import Footer from './Footer';
 import BeerList from './BeerList';
 
 function App(){
@@ -7,6 +8,7 @@ function App(){
     <div>
       <Nav />
       <BeerList />
+      <Footer />
     </div>
   );
 }
