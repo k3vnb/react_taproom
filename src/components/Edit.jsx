@@ -13,7 +13,7 @@ const outerDiv = {
   alignItems: 'center',
   backgroundImage: `url(${wallpaper})`,
   backgroundSize: 'cover'
-}
+};
 const innerDiv = {
   backgroundColor: 'white',
   height: '60%',
@@ -21,7 +21,7 @@ const innerDiv = {
   padding: '5%',
   marginLeft: 100,
   boxShadow: '1px 1px 1px black'
-}
+};
 
 function Edit() {
   if (window.location.href.indexOf('edit') > -1){

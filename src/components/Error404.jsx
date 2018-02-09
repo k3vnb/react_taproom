@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 const error404 = {
   padding: '5%',
   marginLeft: 100
-}
+};
 const confusedImg = {
   borderRadius: '50%',
   height: '30vh',
   width: '20vw',
   boxShadow: '1px 1px 1px black',
   marginLeft: 50
-}
+};
 
 function Error404(){
   return(

@@ -8,7 +8,7 @@ const navFlex = {
   alignItems: 'center',
   borderBottom: '1px solid black',
   padding: '1% 4%',
-  backgroundColor: '#6495ed6e',
+  backgroundColor: '#eec49f',
   textDecoration: 'none'
 };
 
@@ -19,6 +19,7 @@ function Nav() {
       <style jsx global>{`
           a {
             text-decoration: none;
+            color: black;
           }`}</style>
       <h1><Link to='/'>React.Taps</Link></h1>
       <Link to='/edit'>Edit Beers</Link>

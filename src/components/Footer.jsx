@@ -1,25 +1,29 @@
-import React from "react";
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Footer() {
   return(
-  <div className='footerFlex'>
-    <style jsx global>{`
+    <div className='footerFlex'>
+      <style jsx global>{`
         .footerFlex {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 2% 5%;
+          padding: 2% 1%;
+          margin-right: 100px;
           border-top: 1px solid black;
-          background-color: #6495ed6e;
+          background-color: #e5eeff6e;
+          height: 30px;
+          position: fixed;
+          bottom: 0;
+          width: 100vw;
         }
         a {
           text-decoration: none;
         }
     `}</style>
-  <h4><Link to='/'>React.Taps</Link></h4>
-    <p>Cool Stuff</p>
-  </div>
+      <h4><Link to='/'>React.Taps</Link></h4>
+    </div>
   );
 }
 
