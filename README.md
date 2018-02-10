@@ -7,6 +7,8 @@ This project is a recreation of an Angular2 app using React, which displays the 
 
 Reconstructing an Angular project using React brings up interesting comparisons, one of which is that Angular was way less intuitive for me. I think its set up procedure was much more dense and unforgiving, React set-up feels much lighter and malleable. As a result, looking at the Angular flow of information, utilizing [childComponentList]="masterComponentList" type loops, it takes a while for me to mentally map out how that information is flowing and from which directions. In React, using prop-types to loop through an array of key-value pairs, I understand the flow of information much more easily. I am still not sure how I would incorporate filtering items like pipes, but I believe I will learn about these soon.
 
+I think it would be useful, after learning about making my React app dynamic, to style the Angular and React apps exactly the same for side-by-side comparison. In addition to being a showpiece, it would also solidify my knowledge of modularity to have the two items look the same but also be able to describe what's happening under the hood of each.
+
 
 ### Notes:
 Here is a preliminary component tree draft:

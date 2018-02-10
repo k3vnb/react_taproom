@@ -1,5 +1,6 @@
 import React from 'react';
 import Beer from './Beer';
+import banner from './../banner.jpg';
 
 let beerListArray = [
   {
@@ -53,7 +54,7 @@ function BeerList() {
       <style jsx global>{`
           .container {
             background: linear-gradient(-45deg, #fac695 0%,#f5ab66 47%,#ef8d31 100%);
-            min-height: 120vh;
+            min-height: 90vh;
           }
           .card-container-div {
             display: flex;
@@ -70,13 +71,16 @@ function BeerList() {
             transition: transform .1s;
           }
           .beer-card:hover {
-            background-color: pink;
+            background-color: white;
             box-shadow: 1px 2px 3px grey;
             transform: scale(1.05);
           }
           h2 {
             padding: 5%;
             margin-top: -1px;
+          }
+          img {
+            width: 100%;
           }
           `}</style>
       <h2>Our Current Beers</h2>
@@ -94,6 +98,7 @@ function BeerList() {
           </div>
         )}
       </div>
+      <img src={banner}/>
     </div>
   );
 }
