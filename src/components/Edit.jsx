@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import wallpaper from './../wallpaper.jpg';
 import EditBeerList from './EditBeerList';
 import AddBeer from './AddBeer';
 import pint from './../pint.png';
 import porter from './../porter.png';
-import { Switch, Router } from 'react-router-dom';
+// import { Switch, Router } from 'react-router-dom';
 
 const outerDiv = {
   height: '80vh',
@@ -26,7 +27,7 @@ const innerDiv = {
   boxShadow: '1px 1px 1px black',
 };
 
-function Edit() {
+function Edit(props) {
   if (window.location.href.indexOf('edit') > -1){
     return(
       <div style={outerDiv}>
@@ -54,12 +55,16 @@ function Edit() {
               margin-left: 100px;
             }`}</style>
         <div style={innerDiv}>
-          <AddBeer />
+          <AddBeer onAddingNewBeerToList={this.handleAddingNewBeerToList}/>
           <img src={porter}/>
         </div>
       </div>
     );
   }
 }
+
+Edit.propTypes = {
+  onAddingNewBeerToList: PropTypes.func
+};
 
 export default Edit;

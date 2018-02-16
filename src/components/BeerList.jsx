@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Beer from './Beer';
 import banner from './../banner.jpg';
 
@@ -48,7 +49,7 @@ let beerListArray = [
 ];
 
 
-function BeerList() {
+function BeerList(props) {
   return(
     <div className='container'>
       <style jsx>{`
@@ -92,7 +93,6 @@ function BeerList() {
               brand={beer.brand}
               price={beer.price}
               abv={beer.abv}
-              amount={beer.amount}
               key={index}
             />
           </div>
@@ -103,4 +103,10 @@ function BeerList() {
   );
 }
 
+BeerList.propTypes = {
+  beerListArray: PropTypes.array
+};
+
 export default BeerList;
+
+// amount={beer.amount}
