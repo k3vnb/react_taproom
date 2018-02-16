@@ -3,50 +3,50 @@ import PropTypes from 'prop-types';
 import Beer from './Beer';
 import banner from './../banner.jpg';
 
-let beerListArray = [
-  {
-    title: 'Wormwood',
-    brand: 'Big Sal',
-    price: '$6.00',
-    abv: '5.4%',
-    amount: 54
-  },
-  {
-    title: 'Ipsum',
-    brand: 'Lorem',
-    price: '$5.00',
-    abv: '6.4%',
-    amount: 32
-  },
-  {
-    title: 'Git Porter',
-    brand: 'Nth Child Brewing',
-    price: '$6.60',
-    abv: '8.4%',
-    amount: 29
-  },
-  {
-    title: 'Red Ale',
-    brand: 'Drop Top',
-    price: '$6.00',
-    abv: '6.4%',
-    amount: 15
-  },
-  {
-    title: 'Saison',
-    brand: 'Base Camp',
-    price: '$6.00',
-    abv: '6.7%',
-    amount: 32
-  },
-  {
-    title: 'Winter Ale',
-    brand: 'Gigantic Brewing',
-    price: '$6.50',
-    abv: '6.5%',
-    amount: 9
-  }
-];
+// let beerListArray = [
+//   {
+//     title: 'Wormwood',
+//     brand: 'Big Sal',
+//     price: '$6.00',
+//     abv: '5.4%',
+//     amount: 54
+//   },
+//   {
+//     title: 'Ipsum',
+//     brand: 'Lorem',
+//     price: '$5.00',
+//     abv: '6.4%',
+//     amount: 32
+//   },
+//   {
+//     title: 'Git Porter',
+//     brand: 'Nth Child Brewing',
+//     price: '$6.60',
+//     abv: '8.4%',
+//     amount: 29
+//   },
+//   {
+//     title: 'Red Ale',
+//     brand: 'Drop Top',
+//     price: '$6.00',
+//     abv: '6.4%',
+//     amount: 15
+//   },
+//   {
+//     title: 'Saison',
+//     brand: 'Base Camp',
+//     price: '$6.00',
+//     abv: '6.7%',
+//     amount: 32
+//   },
+//   {
+//     title: 'Winter Ale',
+//     brand: 'Gigantic Brewing',
+//     price: '$6.50',
+//     abv: '6.5%',
+//     amount: 9
+//   }
+// ];
 
 
 function BeerList(props) {
@@ -86,7 +86,7 @@ function BeerList(props) {
           `}</style>
       <h2>Our Current Beers</h2>
       <div className='card-container-div'>
-        {beerListArray.map((beer, index) =>
+        {props.beerList.map((beer, index) =>
           <div className='beer-card'>
             <Beer
               title={beer.title}
@@ -104,7 +104,7 @@ function BeerList(props) {
 }
 
 BeerList.propTypes = {
-  beerListArray: PropTypes.array
+  beerList: PropTypes.array
 };
 
 export default BeerList;
