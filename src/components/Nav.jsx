@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Edit from './Edit';
+import EditBeerList from './EditBeerList';
+import AddBeer from './AddBeer';
 
 const navFlex = {
   display: 'flex',
