@@ -28,6 +28,10 @@ Adding state: A preliminary analysis indicates that state will live in both App 
 Here is a preliminary component tree draft showing state:
 ![component tree](img/taproom_diagram.png?raw=true)
 
+Refactor: It became apparent that the 'Edit' component wasn't useful enough to validate its existence, and so a new component tree has been created.
+![component tree](img/taproom_diagram2.png?raw=true)
+
+
 ## Setup Instructions
 To clone this repository: user must run the following commands to initialize the project after cloning:
 * ``$ npm install``
