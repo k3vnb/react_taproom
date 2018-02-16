@@ -1,5 +1,6 @@
 import React from 'react';
 import { v4 } from 'uuid';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 
@@ -8,20 +9,27 @@ function AddBeer(props) {
   let _brand = null;
   let _abv = null;
   let _price = null;
+  let _shows = null;
 
   function handleNewBeerFormSubmission(event) {
     event.preventDefault();
     console.log(_abv.value);
     props.onAddingNewBeerToList({title: _title.value, brand: _brand.value, abv: _abv.value, price: _price.value,  amount: 124, id: v4()});
+    // _show.className = 'showDiv';
     _title.value = '';
     _brand.value = '';
     _abv.value = '';
     _price.value = '';
+    _shows.className = 'hiddenDiv';
+
   }
 
+  const addBeer = {
+    position: 'relative'
+  }
 
   return(
-    <div>
+    <div style={addBeer}>
       <style jsx>{`
           input {
             margin-left: 20px;
@@ -39,8 +47,17 @@ function AddBeer(props) {
             font-size: 15px;
             text-shadow: .5px .5px 1px black;
             box-shadow: 1px 1px 1px black;
+          }
+          .hiddenDiv {
+            display: none;
+          }
+          .showDiv {
+            display: block;
+            position: absolute;
+            top: 30%;
+            left: 60%;
           }`}</style>
-        <form onSubmit={handleNewBeerFormSubmission} to='/'>
+        <form onSubmit={handleNewBeerFormSubmission}>
         <label>Title:</label><input
           placeholder='beer title'
           type='text'
@@ -63,6 +80,9 @@ function AddBeer(props) {
           ref={(input) => {_price = input;}}/><br/>
         <button type="submit">Add New Beer</button>
       </form>
+      <div id='shows' ref={(div) => {_shows = div;}}>
+        <p>Go Home?</p>
+      </div>
     </div>
   );
 }
