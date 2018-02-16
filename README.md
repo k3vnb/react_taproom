@@ -31,6 +31,8 @@ Here is a preliminary component tree draft showing state:
 Refactor: It became apparent that the 'Edit' component wasn't useful enough to validate its existence, and so a new component tree has been created.
 ![component tree](img/taproom_diagram2.png?raw=true)
 
+Update: I am considering making AddBeer a stateful component, particularly with local state, so on submission the user will have the option to either add another beer or go to the homepage.
+
 
 ## Setup Instructions
 To clone this repository: user must run the following commands to initialize the project after cloning:

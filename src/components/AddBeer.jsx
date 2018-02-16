@@ -40,7 +40,7 @@ function AddBeer(props) {
             text-shadow: .5px .5px 1px black;
             box-shadow: 1px 1px 1px black;
           }`}</style>
-      <form onSubmit={handleNewBeerFormSubmission}>
+        <form onSubmit={handleNewBeerFormSubmission} to='/'>
         <label>Title:</label><input
           placeholder='beer title'
           type='text'

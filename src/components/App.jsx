@@ -61,7 +61,7 @@ class App extends React.Component {
                   transition: transform .5s;
                 }
                 img:hover {
-                  transform: scale(1.1);
+                  transform: scale(1.05);
                 }`}</style>
             <div style={innerDiv}>
               <img src={pint}/>
