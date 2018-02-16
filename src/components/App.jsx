@@ -12,6 +12,13 @@ class App extends React.Component {
     this.state = {
       masterBeerList: []
     };
+    this.handleAddingNewBeerToList = this.handleAddingNewBeerToList.bind(this);
+  }
+
+  handleAddingNewBeerToList(newBeer){
+    let newMasterBeerList = this.state.masterBeerList.slice();
+    newMasterBeerList.push(newTicket);
+    this.setState({masterBeerList: newMasterBeerList});
   }
   render() {
     return (
