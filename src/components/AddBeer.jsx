@@ -3,7 +3,7 @@ import React from 'react';
 function AddBeer() {
   return(
     <div>
-      <style jsx global>{`
+      <style jsx>{`
           input {
             margin-left: 20px;
             margin-bottom: 15px;

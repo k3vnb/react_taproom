@@ -51,7 +51,7 @@ let beerListArray = [
 function BeerList() {
   return(
     <div className='container'>
-      <style jsx global>{`
+      <style jsx>{`
           .container {
             background: linear-gradient(-45deg, #fac695 0%,#f5ab66 47%,#ef8d31 100%);
             min-height: 90vh;

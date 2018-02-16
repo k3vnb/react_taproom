@@ -3,7 +3,7 @@ import React from 'react';
 function EditBeerList() {
   return(
     <div>
-      <style jsx global>{`
+      <style jsx>{`
           ul {
             list-style: none;
           }

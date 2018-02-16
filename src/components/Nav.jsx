@@ -16,7 +16,7 @@ const navFlex = {
 function Nav() {
   return (
     <div style={navFlex}>
-      <style jsx global>{`
+      <style jsx>{`
           a {
             text-decoration: none;
             color: black;

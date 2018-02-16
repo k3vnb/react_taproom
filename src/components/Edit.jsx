@@ -30,7 +30,7 @@ function Edit() {
   if (window.location.href.indexOf('edit') > -1){
     return(
       <div style={outerDiv}>
-        <style jsx global>{`
+        <style jsx>{`
             img {
               height: 100%;
               margin-left: 100px;

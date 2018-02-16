@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return(
     <div className='footerFlex'>
-      <style jsx global>{`
+      <style jsx>{`
         .footerFlex {
           display: flex;
           justify-content: space-between;

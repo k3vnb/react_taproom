@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 function Beer(props) {
   return(
     <div>
-      <style jsx global>{`
+      <style jsx>{`
           ul {
             list-style: none;
           }
