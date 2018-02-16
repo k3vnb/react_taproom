@@ -23,12 +23,15 @@ My partner and I tried a rendering process yesterday that I reiterated here: ess
 
 I re-read the 'Thinking In React' article from the React docs. It mostly emphasized to me something that I've been puzzling over, which is that without accounting for 'state', it is difficult to recreate the Angular Taproom app, which has a lot of dynamic components which informs the structure of the app. My current React taproom project is static, and while I can imagine ways to link things together (e.g., export my beerlist json object to its own file so I can import it into both the BeerList and the edit list), I think the better approach is to keep things hardcoded and static for now and be mindful of how to refactor next week as I continue with this project and incorporate state.
 
+### Notes 2/16/18
+Adding state: A preliminary analysis indicates that state will live in both App and Edit BeerList. App will act as the master parent that passes info down to our BeerList. Edit BeerList may also be a point where state might reside, but at this time I will just keep it in App.
+Here is a preliminary component tree draft showing state:
+![component tree](img/taproom_diagram.png?raw=true)
+
 ## Setup Instructions
 To clone this repository: user must run the following commands to initialize the project after cloning:
-* $ npm install
-* $ npm init
-* $ webpack
-* $ npm run start
+* ``$ npm install``
+* ``$ npm run start``
 
 ## Support and contact details
 
