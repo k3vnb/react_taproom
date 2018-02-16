@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 } from 'uuid';
 import PropTypes from 'prop-types';
 
 
@@ -11,7 +12,7 @@ function AddBeer(props) {
   function handleNewBeerFormSubmission(event) {
     event.preventDefault();
     console.log(_abv.value);
-    props.onAddingNewBeerToList({title: _title.value, brand: _brand.value, abv: _abv.value, price: _price.value});
+    props.onAddingNewBeerToList({title: _title.value, brand: _brand.value, abv: _abv.value, price: _price.value,  amount: 124, id: v4()});
     _title.value = '';
     _brand.value = '';
     _abv.value = '';

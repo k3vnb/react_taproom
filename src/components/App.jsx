@@ -20,7 +20,7 @@ class App extends React.Component {
     let newMasterBeerList = this.state.masterBeerList.slice();
     newMasterBeerList.push(newBeer);
     this.setState({masterBeerList: newMasterBeerList});
-    console.log(this.state.masterBeerList);
+    console.table(this.state.masterBeerList);
   }
   render() {
     return (
