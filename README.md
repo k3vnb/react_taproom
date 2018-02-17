@@ -1,5 +1,5 @@
 # Taproom (React)
-### Recreating an Angular2 project with React. 2/9/17
+### Recreating an Angular2 project with React. 2/9/18 & 2/16/18
 ### by **Kevin Boyle**
 
 ###Description:

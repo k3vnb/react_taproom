@@ -30,7 +30,7 @@ class App extends React.Component {
 
   render() {
     const outerDiv = {
-      height: '80vh',
+      height: '100vh',
       width: '100%',
       backgroundColor: 'lightgrey',
       display: 'flex',
@@ -61,7 +61,7 @@ class App extends React.Component {
                   transition: transform .5s;
                 }
                 img:hover {
-                  transform: scale(1.05);
+                  transform: scale(1.01);
                 }`}</style>
             <div style={innerDiv}>
               <img src={pint}/>

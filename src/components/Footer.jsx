@@ -12,6 +12,7 @@ function Footer() {
           padding: 2% 1%;
           margin-right: 100px;
           border-top: 1px solid black;
+          overflow: hidden;
           background-color: #e5eeff6e;
           height: 30px;
           position: fixed;

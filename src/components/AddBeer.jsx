@@ -38,6 +38,9 @@ function AddBeer(props) {
             height: 20px;
             width: 100%;
           }
+          input:focus {
+            outline: none;
+          }
           button {
             background-color: #6363f1db;
             height: 40px;
@@ -46,6 +49,11 @@ function AddBeer(props) {
             font-size: 15px;
             text-shadow: .5px .5px 1px black;
             box-shadow: 1px 1px 1px black;
+            transition: .1s transform;
+          }
+          button:hover {
+            transform: scale(1.1);
+            box-shadow: 1px 2px 2px black;
           }
           .window {
             height: 100px;
