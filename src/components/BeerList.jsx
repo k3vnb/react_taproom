@@ -30,20 +30,21 @@ function BeerList(props) {
             border: 1px solid black;
             background-color: #efac7296;
             margin-bottom: 3vh;
-            box-shadow: .5px .5px 1px grey;
+            box-shadow: .5px .5px 1px #af6969cc;
             transition: transform .1s;
           }
           .beer-card:hover {
-            background: linear-gradient(-45deg, #fac695 0%,#f5ab66 47%,#ef8d31 100%);
-            box-shadow: 1px 2px 3px grey;
+            background: linear-gradient(-45deg, #efac7296 0%,#f5ab66 20%,#efac7296 100%);
+            box-shadow: 2px 3px 4px #af6969cc;
             transform: scale(1.05);
           }
           h2 {
             padding: 5%;
             margin-top: -1px;
+            font-family: 'Kanit', sans-serif;
           }
           `}</style>
-      <h2>Our Current Beers</h2>
+        <h2>Our Current Beers:</h2>
       <div className='card-container-div'>
         {props.beerList.map((beer) =>
           <div className='beer-card'>

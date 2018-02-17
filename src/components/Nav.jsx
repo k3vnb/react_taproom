@@ -31,6 +31,7 @@ function Nav() {
             text-decoration: none;
             color: #da006f6b;
             text-shadow: .5px .5px black;
+            font-family: 'Just Another Hand', sans-serif;
           }
           a:hover {
             color: purple;
