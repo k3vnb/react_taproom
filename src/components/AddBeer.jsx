@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 
+
 function AddBeer(props) {
   let _title = null;
   let _brand = null;
@@ -45,6 +46,10 @@ function AddBeer(props) {
             font-size: 15px;
             text-shadow: .5px .5px 1px black;
             box-shadow: 1px 1px 1px black;
+          }
+          .window {
+            height: 100px;
+            width: 100px;
           }`}</style>
         <form onSubmit={handleNewBeerFormSubmission}>
         <label>Title:</label><input

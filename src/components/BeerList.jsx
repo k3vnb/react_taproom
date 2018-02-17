@@ -37,6 +37,8 @@ function BeerList(props) {
           }
           img {
             width: 100%;
+            position: fixed;
+            bottom: -130px;
           }
           `}</style>
       <h2>Our Current Beers</h2>
