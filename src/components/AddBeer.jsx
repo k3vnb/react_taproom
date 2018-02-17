@@ -20,8 +20,6 @@ function AddBeer(props) {
     _brand.value = '';
     _abv.value = '';
     _price.value = '';
-    _shows.className = 'hiddenDiv';
-
   }
 
   const addBeer = {
@@ -47,15 +45,6 @@ function AddBeer(props) {
             font-size: 15px;
             text-shadow: .5px .5px 1px black;
             box-shadow: 1px 1px 1px black;
-          }
-          .hiddenDiv {
-            display: none;
-          }
-          .showDiv {
-            display: block;
-            position: absolute;
-            top: 30%;
-            left: 60%;
           }`}</style>
         <form onSubmit={handleNewBeerFormSubmission}>
         <label>Title:</label><input
@@ -80,9 +69,6 @@ function AddBeer(props) {
           ref={(input) => {_price = input;}}/><br/>
         <button type="submit">Add New Beer</button>
       </form>
-      <div id='shows' ref={(div) => {_shows = div;}}>
-        <p>Go Home?</p>
-      </div>
     </div>
   );
 }

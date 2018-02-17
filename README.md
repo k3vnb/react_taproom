@@ -33,6 +33,8 @@ Refactor: It became apparent that the 'Edit' component wasn't useful enough to v
 
 Update: I am considering making AddBeer a stateful component, particularly with local state, so on submission the user will have the option to either add another beer or go to the homepage.
 
+Update: I tried and failed at a few different avenues: first I tried to refactor my AddBeer component to be stateful so that it could dynamically display a simple "Thank You" image on submit, with the option to return home or to add another new beer to the list. But this broke my existing functionality and I was unsure how to proceed with the refactor. Then I tried several attempts to make this happen within the stateless component, including using the refs to add an id to a div upon submission within the event handler, but this also didn't work. 
+
 
 ## Setup Instructions
 To clone this repository: user must run the following commands to initialize the project after cloning:
