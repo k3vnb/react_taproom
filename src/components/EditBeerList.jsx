@@ -38,7 +38,7 @@ function EditBeerList(props) {
 }
 
 EditBeerList.propTypes = {
-  beerList: PropTypes.array,
+  beerList: PropTypes.object,
   currentRouterPath: PropTypes.string.isRequired,
   onBeerSelection: PropTypes.func.isRequired,
   selectedBeer: PropTypes.string

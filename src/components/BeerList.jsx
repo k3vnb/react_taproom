@@ -47,24 +47,24 @@ function BeerList(props) {
           }
           `}</style>
       <h2>Our Current Beers:</h2>
-      <div className='beer-card'>
-        {Object.keys(props.beerList).map(function(beerId) {
-          let beer = props.beerList[beerId];
+      {Object.keys(props.beerList).map(function(beerId) {
+        let beer = props.beerList[beerId];
 
-          return <div className='card-container-div'><Beer
-            title={beer.title}
-            brand={beer.brand}
-            price={beer.price}
-            abv={beer.abv}
-            amount={beer.amount}
-            key={beerId}
-            beerId={beerId}
-            currentRouterPath={props.currentRouterPath}
-            onBeerSelection={props.onBeerSelection}
-          /> </div>;
 
-        })}
-      </div>
+        return <div className='beer-card'><div className='card-container-div'><Beer
+          title={beer.title}
+          brand={beer.brand}
+          price={beer.price}
+          abv={beer.abv}
+          amount={beer.amount}
+          key={beerId}
+          beerId={beerId}
+          currentRouterPath={props.currentRouterPath}
+          onBeerSelection={props.onBeerSelection}
+        /> </div></div>;
+
+      })}
+
     </div>
   );
 }

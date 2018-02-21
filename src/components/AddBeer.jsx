@@ -1,6 +1,4 @@
 import React from 'react';
-
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 
@@ -10,13 +8,11 @@ function AddBeer(props) {
   let _brand = null;
   let _abv = null;
   let _price = null;
-  let _shows = null;
 
   function handleNewBeerFormSubmission(event) {
     event.preventDefault();
     console.log(_abv.value);
     props.onAddingNewBeerToList({title: _title.value, brand: _brand.value, abv: _abv.value, price: _price.value,  amount: 124});
-    // _show.className = 'showDiv';
     _title.value = '';
     _brand.value = '';
     _abv.value = '';

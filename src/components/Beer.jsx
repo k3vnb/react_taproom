@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 
 
 function Beer(props) {
+  const cardStyle = {
+    width: 300
+  };
   const beerInformation =
     <div>
       <style jsx>{`
@@ -22,7 +25,7 @@ function Beer(props) {
       </ul>
     </div>;
   if (props.currentRouterPath === '/edit'){
-    return(<div onClick={() => {props.onBeerSelection(props.beerId);}}>{props.title}</div>
+    return(<div style={cardStyle} onClick={() => {props.onBeerSelection(props.beerId);}}>{props.title}</div>
     );
   } else {
     return (

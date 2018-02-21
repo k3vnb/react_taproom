@@ -22,7 +22,7 @@ class App extends React.Component {
           price: '$5.00',
           abv: '6.4%',
           amount: 32,
-          id: '0'
+          // id: '0'
         },
         '1' : {
           title: 'Git Porter',
@@ -30,7 +30,7 @@ class App extends React.Component {
           price: '$6.60',
           abv: '8.4%',
           amount: 29,
-          id: '1'
+          // id: '1'
         }
       },
       selectedBeer: null
@@ -69,9 +69,9 @@ class App extends React.Component {
       justifyContent: 'space-between',
       backgroundColor: 'white',
       height: '60%',
-      width: '60%',
+      width: '76%',
+      minWidth: '600px',
       padding: '5%',
-      marginLeft: 100,
       boxShadow: '1px 1px 1px black',
     };
     return (
