@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BeerList from './BeerList';
+import BeerDetail from './BeerDetail';
 
 function EditBeerList(props) {
   return(
@@ -23,7 +24,7 @@ function EditBeerList(props) {
             object-fit: cover;
           }`}</style>
       <h5>Select Beer to Edit:</h5>
-
+      <BeerDetail />
       <BeerList beerList={props.beerList} currentRouterPath={props.currentRouterPath}/>
 
     </div>

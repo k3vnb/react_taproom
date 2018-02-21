@@ -29,7 +29,8 @@ class App extends React.Component {
           abv: '8.4%',
           amount: 29
         }
-      ]
+      ],
+      selectedBeer: null
     };
     this.handleAddingNewBeerToList = this.handleAddingNewBeerToList.bind(this);
   }
