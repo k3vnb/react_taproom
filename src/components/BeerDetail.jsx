@@ -14,6 +14,6 @@ function BeerDetail(props) {
 
 BeerDetail.propTypes = {
   selectedBeer: PropTypes.object
-}
+};
 
 export default BeerDetail;

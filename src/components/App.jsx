@@ -14,22 +14,22 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterBeerList: [
-        {
+      masterBeerList: {
+        '0' : {
           title: 'Ipsum',
           brand: 'Lorem',
           price: '$5.00',
           abv: '6.4%',
           amount: 32
         },
-        {
+        '1' : {
           title: 'Git Porter',
           brand: 'Nth Child Brewing',
           price: '$6.60',
           abv: '8.4%',
           amount: 29
         }
-      ],
+      },
       selectedBeer: null
     };
     this.handleAddingNewBeerToList = this.handleAddingNewBeerToList.bind(this);
@@ -37,8 +37,8 @@ class App extends React.Component {
   }
 
   handleAddingNewBeerToList(newBeer){
-    let newMasterBeerList = this.state.masterBeerList.slice();
-    newMasterBeerList.push(newBeer);
+    let newMasterBeerList = Object.assign({}, this.state.masterBeerList, {[newBeer.id]: newBeer});
+    // newMasterBeerList.push(newBeer);
     this.setState({masterBeerList: newMasterBeerList});
     console.table(this.state.masterBeerList);
   }
@@ -87,8 +87,8 @@ class App extends React.Component {
             <div style={innerDiv}>
               <img src={pint}/>
               <Route path='/edit' render={(props)=><EditBeerList beerList={this.state.masterBeerList} currentRouterPath={props.location.pathname}
-              onBeerSelection={this.handleChangingSelectedBeer}
-              selectedBeer={this.state.selectedBeer}/>} />
+                onBeerSelection={this.handleChangingSelectedBeer}
+                selectedBeer={this.state.selectedBeer}/>} />
               <Route path='/addnew' render={() =><AddBeer onAddingNewBeerToList={this.handleAddingNewBeerToList} />}/>
               <img src={porter}/>
             </div>
