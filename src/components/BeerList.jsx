@@ -5,9 +5,6 @@ import mug from './../assets/mug.png';
 
 
 function BeerList(props) {
-  const editBeerListStyles = {
-
-  }
   if (props.currentRouterPath === '/edit'){
     return (
       <div >
@@ -77,8 +74,6 @@ function BeerList(props) {
         <h2>Our Current Beers:</h2>
         {Object.keys(props.beerList).map(function(beerId) {
           let beer = props.beerList[beerId];
-
-
           return <div className='beer-card'><div className='card-container-div'><Beer
             title={beer.title}
             brand={beer.brand}
@@ -90,12 +85,9 @@ function BeerList(props) {
             currentRouterPath={props.currentRouterPath}
             onBeerSelection={props.onBeerSelection}
           /> </div></div>;
-
         })}
-
       </div>
     );
-
   }
 }
 

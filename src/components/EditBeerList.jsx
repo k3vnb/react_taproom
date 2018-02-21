@@ -32,7 +32,6 @@ function EditBeerList(props) {
       <BeerList beerList={props.beerList}
         currentRouterPath={props.currentRouterPath}
         onBeerSelection={props.onBeerSelection}/>
-
     </div>
   );
 }

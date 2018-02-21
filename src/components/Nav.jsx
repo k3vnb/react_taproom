@@ -3,7 +3,6 @@ import bubbles from './../assets/bubbles1.gif';
 import beermug from './../assets/beermug.png';
 import { Link } from 'react-router-dom';
 
-// '#eec49f'
 const navFlex = {
   display: 'flex',
   justifyContent: 'space-around',
@@ -19,7 +18,6 @@ const navFlex = {
   top: '0',
   width: '100vw',
   height: '4vh',
-  // fontFamily: 'Concert One, cursive'
 };
 
 
