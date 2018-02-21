@@ -57,8 +57,8 @@ function BeerList(props) {
             price={beer.price}
             abv={beer.abv}
             amount={beer.amount}
-            key={beer.id}
-            beerId={beer.id}
+            key={beerId}
+            beerId={beerId}
             currentRouterPath={props.currentRouterPath}
             onBeerSelection={props.onBeerSelection}
           /> </div>;

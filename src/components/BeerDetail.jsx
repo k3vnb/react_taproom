@@ -13,7 +13,7 @@ function BeerDetail(props) {
 }
 
 BeerDetail.propTypes = {
-  selectedBeer: PropTypes.string
+  selectedBeer: PropTypes.object
 };
 
 export default BeerDetail;

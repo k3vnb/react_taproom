@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from './Nav';
 import Footer from './Footer';
 import AddBeer from './AddBeer';
+import { v4 } from 'uuid';
 import EditBeerList from './EditBeerList';
 import wallpaper from './../wallpaper.jpg';
 import pint from './../pint.png';
@@ -39,6 +40,7 @@ class App extends React.Component {
   }
 
   handleAddingNewBeerToList(newBeer){
+    let newBeerId = v4();
     let newMasterBeerList = Object.assign({}, this.state.masterBeerList, {[newBeer.id]: newBeer});
     // newMasterBeerList.push(newBeer);
     this.setState({masterBeerList: newMasterBeerList});
@@ -46,7 +48,6 @@ class App extends React.Component {
   }
 
   handleChangingSelectedBeer(beerId) {
-    alert(`hello ${this.masterBeerList}`);
     this.setState({selectedBeer: beerId});
   }
 
