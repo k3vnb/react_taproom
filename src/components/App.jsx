@@ -45,7 +45,6 @@ class App extends React.Component {
 
   handleChangingSelectedBeer(beer) {
     this.setState({selectedBeer: beer});
-    alert('It is' + this.state.selectedBeer.title);
   }
 
 
@@ -88,7 +87,8 @@ class App extends React.Component {
             <div style={innerDiv}>
               <img src={pint}/>
               <Route path='/edit' render={(props)=><EditBeerList beerList={this.state.masterBeerList} currentRouterPath={props.location.pathname}
-              onBeerSelection={this.handleChangingSelectedBeer}/>} />
+              onBeerSelection={this.handleChangingSelectedBeer}
+              selectedBeer={this.state.selectedBeer}/>} />
               <Route path='/addnew' render={() =><AddBeer onAddingNewBeerToList={this.handleAddingNewBeerToList} />}/>
               <img src={porter}/>
             </div>

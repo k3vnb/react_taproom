@@ -19,11 +19,10 @@ function Beer(props) {
         <li><span className='beer-label'>Brand: </span> {props.brand}</li>
         <li><span className='beer-label'>Price: </span>{props.price}</li>
         <li><span className='beer-label'>ABV: </span>{props.abv}</li>
-        <li><span className='beer-label'>Amount Left: </span> {props.amount}</li>
       </ul>
     </div>;
   if (props.currentRouterPath === '/edit'){
-    return(<div onClick={() => {props.onBeerSelection({title: props.title, brand: props.brand, price: props.price, abv: props.abc, amount: props.amount})}}>{props.title}</div>
+    return(<div onClick={() => {props.onBeerSelection({title: props.title, brand: props.brand, price: props.price, abv: props.abv, amount: props.amount})}}>{props.title}</div>
     );
   } else {
     return (

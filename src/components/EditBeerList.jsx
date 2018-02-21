@@ -4,6 +4,10 @@ import BeerList from './BeerList';
 import BeerDetail from './BeerDetail';
 
 function EditBeerList(props) {
+  let optionalSelectedBeerContent = null;
+  if (props.selectedBeer != null){
+    optionalSelectedBeerContent = <BeerDetail selectedBeer={props.selectedBeer}/>
+  }
   return(
     <div>
       <style jsx>{`
@@ -24,7 +28,7 @@ function EditBeerList(props) {
             object-fit: cover;
           }`}</style>
       <h5>Select Beer to Edit:</h5>
-      <BeerDetail />
+      {optionalSelectedBeerContent}
       <BeerList beerList={props.beerList} currentRouterPath={props.currentRouterPath}
       onBeerSelection={props.onBeerSelection}/>
 
@@ -35,7 +39,8 @@ function EditBeerList(props) {
 EditBeerList.propTypes = {
   beerList: PropTypes.array,
   currentRouterPath: PropTypes.string.isRequired,
-  onBeerSelection: PropTypes.func.isRequired
+  onBeerSelection: PropTypes.func.isRequired,
+  selectedBeer: PropTypes.object
 };
 
 export default EditBeerList;
