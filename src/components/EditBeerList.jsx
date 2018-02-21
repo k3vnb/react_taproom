@@ -27,8 +27,8 @@ function EditBeerList(props) {
             display: flex;
             object-fit: cover;
           }`}</style>
-      <h5>Select Beer to Edit:</h5>
       {optionalSelectedBeerContent}
+      <h5>Select Beer to Edit:</h5>
       <BeerList beerList={props.beerList}
         currentRouterPath={props.currentRouterPath}
         onBeerSelection={props.onBeerSelection}/>
