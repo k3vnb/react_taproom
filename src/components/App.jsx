@@ -20,14 +20,16 @@ class App extends React.Component {
           brand: 'Lorem',
           price: '$5.00',
           abv: '6.4%',
-          amount: 32
+          amount: 32,
+          id: '0'
         },
         '1' : {
           title: 'Git Porter',
           brand: 'Nth Child Brewing',
           price: '$6.60',
           abv: '8.4%',
-          amount: 29
+          amount: 29,
+          id: '1'
         }
       },
       selectedBeer: null
@@ -43,8 +45,9 @@ class App extends React.Component {
     console.table(this.state.masterBeerList);
   }
 
-  handleChangingSelectedBeer(beer) {
-    this.setState({selectedBeer: beer});
+  handleChangingSelectedBeer(beerId) {
+    alert(`hello ${this.masterBeerList}`);
+    this.setState({selectedBeer: beerId});
   }
 
 

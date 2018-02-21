@@ -22,7 +22,7 @@ function Beer(props) {
       </ul>
     </div>;
   if (props.currentRouterPath === '/edit'){
-    return(<div onClick={() => {props.onBeerSelection({title: props.title, brand: props.brand, price: props.price, abv: props.abv, amount: props.amount});}}>{props.title}</div>
+    return(<div onClick={() => {props.onBeerSelection(props.beerId);}}>{props.title}</div>
     );
   } else {
     return (
@@ -37,6 +37,7 @@ Beer.propTypes = {
   price: PropTypes.string,
   abv: PropTypes.string,
   amount: PropTypes.number,
+  beerId: PropTypes.string.isRequired,
   currentRouterPath: PropTypes.string,
   onBeerSelection: PropTypes.func
 };

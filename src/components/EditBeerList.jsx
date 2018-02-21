@@ -6,7 +6,7 @@ import BeerDetail from './BeerDetail';
 function EditBeerList(props) {
   let optionalSelectedBeerContent = null;
   if (props.selectedBeer != null){
-    optionalSelectedBeerContent = <BeerDetail selectedBeer={props.selectedBeer}/>;
+    optionalSelectedBeerContent = <BeerDetail selectedBeer={props.beerList[props.selectedBeer]}/>;
   }
   return(
     <div>
@@ -29,7 +29,8 @@ function EditBeerList(props) {
           }`}</style>
       <h5>Select Beer to Edit:</h5>
       {optionalSelectedBeerContent}
-      <BeerList beerList={props.beerList} currentRouterPath={props.currentRouterPath}
+      <BeerList beerList={props.beerList}
+        currentRouterPath={props.currentRouterPath}
         onBeerSelection={props.onBeerSelection}/>
 
     </div>
@@ -40,7 +41,7 @@ EditBeerList.propTypes = {
   beerList: PropTypes.array,
   currentRouterPath: PropTypes.string.isRequired,
   onBeerSelection: PropTypes.func.isRequired,
-  selectedBeer: PropTypes.object
+  selectedBeer: PropTypes.string
 };
 
 export default EditBeerList;
