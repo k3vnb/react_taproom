@@ -35,6 +35,11 @@ Update: I am considering making AddBeer a stateful component, particularly with 
 
 Update: I tried and failed at a few different avenues: first I tried to refactor my AddBeer component to be stateful so that it could dynamically display a simple "Thank You" image on submit, with the option to return home or to add another new beer to the list. But this broke my existing functionality and I was unsure how to proceed with the refactor. Then I tried several attempts to make this happen within the stateless component, including using the refs to add an id to a div upon submission within the event handler, but this also didn't work.
 
+#### 2/21/19 refactor
+I updated the component tree and refactored so that 'EditBeerList' and masterBeerList are all of the same source of truth.
+![component tree](img/componenttreeReactTaps.jpg?raw=true)
+Both the BeerList and Beer components render their views differently based on whether they are a part of the '/edit' route or '/' route. I do not have the functionality yet to actually make edits to the beerList, but whereas the edit list was previously hard-coded and unconnected to the actual beerlist, the current version has those components linked together, receiving the same information from App.
+
 
 ## Setup Instructions
 To clone this repository: user must run the following commands to initialize the project after cloning:
