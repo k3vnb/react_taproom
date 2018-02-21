@@ -58,6 +58,7 @@ function BeerList(props) {
               amount={beer.amount}
               key={beer.id}
               currentRouterPath={props.currentRouterPath}
+              onBeerSelection={props.onBeerSelection}
             />
           </div>
         )}
@@ -68,7 +69,8 @@ function BeerList(props) {
 
 BeerList.propTypes = {
   beerList: PropTypes.array,
-  currentRouterPath: PropTypes.string
+  currentRouterPath: PropTypes.string,
+  onBeerSelection: PropTypes.func
 };
 
 export default BeerList;

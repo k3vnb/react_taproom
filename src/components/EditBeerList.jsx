@@ -25,7 +25,8 @@ function EditBeerList(props) {
           }`}</style>
       <h5>Select Beer to Edit:</h5>
       <BeerDetail />
-      <BeerList beerList={props.beerList} currentRouterPath={props.currentRouterPath}/>
+      <BeerList beerList={props.beerList} currentRouterPath={props.currentRouterPath}
+      onBeerSelection={props.onBeerSelection}/>
 
     </div>
   );
@@ -33,7 +34,8 @@ function EditBeerList(props) {
 
 EditBeerList.propTypes = {
   beerList: PropTypes.array,
-  currentRouterPath: PropTypes.string.isRequired
+  currentRouterPath: PropTypes.string.isRequired,
+  onBeerSelection: PropTypes.func.isRequired
 };
 
 export default EditBeerList;

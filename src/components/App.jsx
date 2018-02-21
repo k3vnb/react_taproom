@@ -33,6 +33,7 @@ class App extends React.Component {
       selectedBeer: null
     };
     this.handleAddingNewBeerToList = this.handleAddingNewBeerToList.bind(this);
+    this.handleChangingSelectedBeer = this.handleChangingSelectedBeer.bind(this);
   }
 
   handleAddingNewBeerToList(newBeer){
@@ -40,6 +41,11 @@ class App extends React.Component {
     newMasterBeerList.push(newBeer);
     this.setState({masterBeerList: newMasterBeerList});
     console.table(this.state.masterBeerList);
+  }
+
+  handleChangingSelectedBeer(beer) {
+    this.setState({selectedBeer: beer});
+    alert('It is' + this.state.selectedBeer.title);
   }
 
 
@@ -81,7 +87,8 @@ class App extends React.Component {
                 }`}</style>
             <div style={innerDiv}>
               <img src={pint}/>
-              <Route path='/edit' render={(props)=><EditBeerList beerList={this.state.masterBeerList} currentRouterPath={props.location.pathname}/>} />
+              <Route path='/edit' render={(props)=><EditBeerList beerList={this.state.masterBeerList} currentRouterPath={props.location.pathname}
+              onBeerSelection={this.handleChangingSelectedBeer}/>} />
               <Route path='/addnew' render={() =><AddBeer onAddingNewBeerToList={this.handleAddingNewBeerToList} />}/>
               <img src={porter}/>
             </div>
