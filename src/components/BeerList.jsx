@@ -5,14 +5,20 @@ import mug from './../assets/mug.png';
 
 
 function BeerList(props) {
+  const editBeerListStyles = {
+
+  }
   if (props.currentRouterPath === '/edit'){
     return (
-      <div>
+      <div >
+        <style jsx>{`
+            .beerName:hover {
+              color: blue;
+              cursor: pointer;
+            }`}</style>
         {Object.keys(props.beerList).map(function(beerId) {
           let beer = props.beerList[beerId];
-
-
-          return <div><div><Beer
+          return <div><div className='beerName'><Beer
             title={beer.title}
             brand={beer.brand}
             price={beer.price}
@@ -32,9 +38,10 @@ function BeerList(props) {
         <style jsx>{`
            .container {
              background-repeat: no-repeat;
-             background-position: 120% 20%;
+             background-position: 180% 20%;
              min-height: 175vh;
              margin-top: 65px;
+             padding-left: 100px;
              background-image: url(${mug});
            }
            .card-container-div {
@@ -50,7 +57,7 @@ function BeerList(props) {
              padding-right: 10%;
              width: 25%;
              height: 30%;
-             border: 1px solid black;
+             border: 3px solid #000000ba;
              background-color: #efac7296;
              margin-bottom: 3vh;
              box-shadow: .5px .5px 1px #af6969cc;
