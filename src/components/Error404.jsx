@@ -1,5 +1,5 @@
 import React from 'react';
-import confused from './../confused.jpg';
+import confused from './../assets/confused.jpg';
 import { Link } from 'react-router-dom';
 
 const error404 = {

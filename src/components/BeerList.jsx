@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Beer from './Beer';
-import mug from './../mug.png';
-import banner from './../banner.jpg';
+import mug from './../assets/mug.png';
+
 
 
 function BeerList(props) {

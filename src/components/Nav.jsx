@@ -1,6 +1,6 @@
 import React from 'react';
-import bubbles from './../bubbles1.gif';
-import beermug from './../beermug.png';
+import bubbles from './../assets/bubbles1.gif';
+import beermug from './../assets/beermug.png';
 import { Link } from 'react-router-dom';
 
 // '#eec49f'

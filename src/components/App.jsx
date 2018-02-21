@@ -4,9 +4,9 @@ import Footer from './Footer';
 import AddBeer from './AddBeer';
 import { v4 } from 'uuid';
 import EditBeerList from './EditBeerList';
-import wallpaper from './../wallpaper.jpg';
-import pint from './../pint.png';
-import porter from './../porter.png';
+import wallpaper from './../assets/wallpaper.jpg';
+import pint from './../assets/pint.png';
+import porter from './../assets/porter.png';
 import BeerList from './BeerList';
 import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
@@ -41,7 +41,7 @@ class App extends React.Component {
 
   handleAddingNewBeerToList(newBeer){
     let newBeerId = v4();
-    let newMasterBeerList = Object.assign({}, this.state.masterBeerList, {[newBeer.id]: newBeer});
+    let newMasterBeerList = Object.assign({}, this.state.masterBeerList, {[newBeerId]: newBeer});
     // newMasterBeerList.push(newBeer);
     this.setState({masterBeerList: newMasterBeerList});
     console.table(this.state.masterBeerList);
