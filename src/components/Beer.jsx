@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 
 function Beer(props) {
-  return(
+  const beerInformation =
     <div>
       <style jsx>{`
           ul {
@@ -13,7 +13,7 @@ function Beer(props) {
             font-size: 10px;
             font-weight: bold;
           }
-            `}</style>
+          `}</style>
       <ul>
         <li><span className='beer-label'>Beer: </span> {props.title}</li>
         <li><span className='beer-label'>Brand: </span> {props.brand}</li>
@@ -21,8 +21,15 @@ function Beer(props) {
         <li><span className='beer-label'>ABV: </span>{props.abv}</li>
         <li><span className='beer-label'>Amount Left: </span> {props.amount}</li>
       </ul>
-    </div>
-  );
+    </div>;
+  if (props.currentRouterPath === '/edit'){
+    return(<div>{props.title}</div>
+    );
+  } else {
+    return (
+      <div>{beerInformation}</div>
+    );
+  }
 }
 
 Beer.propTypes = {
@@ -30,7 +37,8 @@ Beer.propTypes = {
   brand: PropTypes.string,
   price: PropTypes.string,
   abv: PropTypes.string,
-  amount: PropTypes.number
+  amount: PropTypes.number,
+  currentRouterPath: PropTypes.string
 };
 
 export default Beer;

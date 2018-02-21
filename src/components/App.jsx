@@ -14,7 +14,22 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterBeerList: []
+      masterBeerList: [
+        {
+          title: 'Ipsum',
+          brand: 'Lorem',
+          price: '$5.00',
+          abv: '6.4%',
+          amount: 32
+        },
+        {
+          title: 'Git Porter',
+          brand: 'Nth Child Brewing',
+          price: '$6.60',
+          abv: '8.4%',
+          amount: 29
+        }
+      ]
     };
     this.handleAddingNewBeerToList = this.handleAddingNewBeerToList.bind(this);
   }
@@ -65,7 +80,7 @@ class App extends React.Component {
                 }`}</style>
             <div style={innerDiv}>
               <img src={pint}/>
-              <Route path='/edit' component={EditBeerList} />
+              <Route path='/edit' render={(props)=><EditBeerList beerList={this.state.masterBeerList} currentRouterPath={props.location.pathname}/>} />
               <Route path='/addnew' render={() =><AddBeer onAddingNewBeerToList={this.handleAddingNewBeerToList} />}/>
               <img src={porter}/>
             </div>

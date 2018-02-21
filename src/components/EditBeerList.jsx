@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import BeerList from './BeerList';
 
-function EditBeerList() {
+function EditBeerList(props) {
   return(
     <div>
       <style jsx>{`
@@ -22,17 +24,15 @@ function EditBeerList() {
           }`}</style>
       <h5>Select Beer to Edit:</h5>
 
-      <ul>
-        <li><a href='#'>Big Sal Wormwood</a></li>
-        <li><a href='#'>Lorem Ipsum</a></li>
-        <li><a href='#'>Nth Child Git Porter</a></li>
-        <li><a href='#'>Drop Top Red Ale</a></li>
-        <li><a href='#'>Base Camp Saison</a></li>
-        <li><a href='#'>Gigantic Winter Ale</a></li>
-      </ul>
+      <BeerList beerList={props.beerList} currentRouterPath={props.currentRouterPath}/>
 
     </div>
   );
 }
+
+EditBeerList.propTypes = {
+  beerList: PropTypes.array,
+  currentRouterPath: PropTypes.string.isRequired
+};
 
 export default EditBeerList;

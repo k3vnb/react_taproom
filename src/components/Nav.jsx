@@ -54,3 +54,5 @@ function Nav() {
 }
 
 export default Nav;
+
+//here <style jsx global> is necessary to access the <a> tag under the hood of the <Link> tag

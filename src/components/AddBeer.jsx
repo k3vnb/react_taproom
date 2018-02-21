@@ -25,7 +25,7 @@ function AddBeer(props) {
 
   const addBeer = {
     position: 'relative'
-  }
+  };
 
   return(
     <div style={addBeer}>
@@ -59,7 +59,7 @@ function AddBeer(props) {
             height: 100px;
             width: 100px;
           }`}</style>
-        <form onSubmit={handleNewBeerFormSubmission}>
+      <form onSubmit={handleNewBeerFormSubmission}>
         <label>Title:</label><input
           placeholder='beer title'
           type='text'

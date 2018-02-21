@@ -12,14 +12,16 @@ function BeerList(props) {
           .container {
             background-repeat: no-repeat;
             background-position: 120% 20%;
-            min-height: 200vh;
+            min-height: 175vh;
             margin-top: 65px;
             background-image: url(${mug});
           }
           .card-container-div {
             display: flex;
+            margin-left: 8vh;
             flex-direction: column;
             flex-wrap: wrap;
+            max-height: 120vh;
             justify-content: flex-start;
             padding: 2%;
           }
@@ -44,7 +46,7 @@ function BeerList(props) {
             font-family: 'Kanit', sans-serif;
           }
           `}</style>
-        <h2>Our Current Beers:</h2>
+      <h2>Our Current Beers:</h2>
       <div className='card-container-div'>
         {props.beerList.map((beer) =>
           <div className='beer-card'>
@@ -55,6 +57,7 @@ function BeerList(props) {
               abv={beer.abv}
               amount={beer.amount}
               key={beer.id}
+              currentRouterPath={props.currentRouterPath}
             />
           </div>
         )}
@@ -64,53 +67,8 @@ function BeerList(props) {
 }
 
 BeerList.propTypes = {
-  beerList: PropTypes.array
+  beerList: PropTypes.array,
+  currentRouterPath: PropTypes.string
 };
 
 export default BeerList;
-
-
-// let beerListArray = [
-//   {
-//     title: 'Wormwood',
-//     brand: 'Big Sal',
-//     price: '$6.00',
-//     abv: '5.4%',
-//     amount: 54
-//   },
-//   {
-//     title: 'Ipsum',
-//     brand: 'Lorem',
-//     price: '$5.00',
-//     abv: '6.4%',
-//     amount: 32
-//   },
-//   {
-//     title: 'Git Porter',
-//     brand: 'Nth Child Brewing',
-//     price: '$6.60',
-//     abv: '8.4%',
-//     amount: 29
-//   },
-//   {
-//     title: 'Red Ale',
-//     brand: 'Drop Top',
-//     price: '$6.00',
-//     abv: '6.4%',
-//     amount: 15
-//   },
-//   {
-//     title: 'Saison',
-//     brand: 'Base Camp',
-//     price: '$6.00',
-//     abv: '6.7%',
-//     amount: 32
-//   },
-//   {
-//     title: 'Winter Ale',
-//     brand: 'Gigantic Brewing',
-//     price: '$6.50',
-//     abv: '6.5%',
-//     amount: 9
-//   }
-// ];
